@@ -1,18 +1,5 @@
-#!/usr/bin/python
-# -*- coding: utf-8 -*-
-
-try:
-    import pygame
-except ImportError:
-    print("Problem with import pygame module.")
-    print("sudo apt-get install python-pygame ")
-
-try:
-    import numpy as np
-except ImportError:
-    print("Problem with import numpy module.")
-    print("pip3 install numpy")
-
+import pygame
+import numpy as np
 import random
 import os
 

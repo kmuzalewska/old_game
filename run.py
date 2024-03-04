@@ -1,11 +1,4 @@
-#!/usr/bin/python
-# -*- coding: utf-8 -*-
-
-try:
-    import pygame
-except ImportError:
-    print("Problem with import pygame module.")
-    print("sudo apt-get install python-pygame ")
+import pygame
 from panda import Panda
 from bambus import Bambus
 from szustak import Szustak
@@ -102,16 +95,11 @@ class Game(object):
     def detectCollision(self, object):
         if self.player.pos[0]+ self.player.size[0] >= object.pos[0] >= self.player.pos[0] and self.player.pos[1]+self.player.size[1] >= object.pos[1] >= self.player.pos[1]:
             return True
-        elif self.player.pos[0] + self.player.size[0] >= object.pos[0]+ object.size[0] >= self.player.pos[0] and self.player.pos[
-            1] + self.player.size[1] >= object.pos[1] >= self.player.pos[1]:
+        elif self.player.pos[0] + self.player.size[0] >= object.pos[0]+ object.size[0] >= self.player.pos[0] and self.player.pos[1] + self.player.size[1] >= object.pos[1] >= self.player.pos[1]:
             return True
-        elif self.player.pos[0] + self.player.size[0] >= object.pos[0] >= self.player.pos[
-            0] and self.player.pos[
-                       1] + self.player.size[1] >= object.pos[1]+object.size[1] >= self.player.pos[1]:
+        elif self.player.pos[0] + self.player.size[0] >= object.pos[0] >= self.player.pos[0] and self.player.pos[1] + self.player.size[1] >= object.pos[1]+object.size[1] >= self.player.pos[1]:
             return True
-        elif self.player.pos[0] + self.player.size[0] >= object.pos[0]+object.size[0] >= self.player.pos[
-            0] and self.player.pos[
-                       1] + self.player.size[1] >= object.pos[1] + object.size[1] >= self.player.pos[1]:
+        elif self.player.pos[0] + self.player.size[0] >= object.pos[0]+object.size[0] >= self.player.pos[0] and self.player.pos[1] + self.player.size[1] >= object.pos[1] + object.size[1] >= self.player.pos[1]:
             return True
         else:
             return False
